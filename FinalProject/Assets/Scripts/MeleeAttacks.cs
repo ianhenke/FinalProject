@@ -7,13 +7,16 @@ public class MeleeAttacks : MonoBehaviour
     [SerializeField] Transform attackPoint;
     [SerializeField] float attackRange = 1;
     [SerializeField] LayerMask enemyLayer;
-    [SerializeField] int damageOutput = 10;
+    [SerializeField] int damageOutput = 34;
+    [SerializeField] SpriteRenderer attackIndicator;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Attack(); 
+            Attack();
+            StartCoroutine(AttackIndicatorRoutine());
+            Debug.Log("INICATOR ON");
         }
     }
 
@@ -38,4 +41,12 @@ public class MeleeAttacks : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    IEnumerator AttackIndicatorRoutine()
+    {
+        attackIndicator.enabled = true;
+        yield return new WaitForSeconds(.1f);
+        attackIndicator.enabled = false;
+    }
+
 }

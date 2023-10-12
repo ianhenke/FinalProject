@@ -10,6 +10,7 @@ public class DeathZone : MonoBehaviour
         if (other.gameObject.CompareTag("Tate"))
         {
             other.gameObject.GetComponent<Respawn>().respawn();
+            other.gameObject.GetComponent<Health>().TakeDamage(50);
         }
         else
         {

@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        if(currentHealth > 0)
+        if(currentHealth - damageAmount > 0)
         {
             currentHealth -= damageAmount;
         }

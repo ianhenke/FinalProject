@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2569475577311345672}
   - component: {fileID: 3083963225295548198}
   - component: {fileID: 2861827238008289079}
+  - component: {fileID: 6746801987272490872}
   m_Layer: 5
   m_Name: HealthCounter
   m_TagString: Untagged
@@ -194,3 +195,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6746801987272490872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3682142408562490501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c5e2862fd357b4babe37048b1e3702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
