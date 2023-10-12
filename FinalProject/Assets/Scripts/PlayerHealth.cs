@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -26,8 +27,9 @@ public class Health : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            Debug.Log("Player has died");
+            this.GetComponent<SpriteRenderer>().enabled = false;
+            SceneManager.LoadScene("DeathScreen");
+            
         }
 
         healthController.SetHealthText(currentHealth);
