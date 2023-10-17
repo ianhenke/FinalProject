@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SettingsMenuHandler : MonoBehaviour
 {
-    public void BackButton(string sceneName)
+    public static string lastScene = "";
+
+    public void BackButton()
     {
-        SceneManager.LoadScene(sceneName);
+        Debug.Log("loaded: " + lastScene);
+        SceneManager.LoadScene(lastScene);
     }
 }
