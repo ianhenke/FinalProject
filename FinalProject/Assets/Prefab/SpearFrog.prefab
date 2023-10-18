@@ -204,7 +204,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   viewRadius: 27.79
   thrower: {fileID: 7791490507515370102}
-  throwDelay: 27.09
+  throwDelay: 0.5
 --- !u!50 &493430921106580395
 Rigidbody2D:
   serializedVersion: 4

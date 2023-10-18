@@ -19,6 +19,11 @@ public class CameraZoomController : MonoBehaviour
         StartCoroutine(ZoomOut());
     }
 
+    public void ZoomIn()
+    {
+        StartCoroutine(ZoomInRoutine());
+    }
+
     private IEnumerator ZoomOut()
     {
         float timer = 0;
@@ -31,4 +36,18 @@ public class CameraZoomController : MonoBehaviour
 
         mainCamera.orthographicSize = targetSize;
     }
+    private IEnumerator ZoomInRoutine()
+    {
+        float timer = 0;
+        zoomDuration = .5f;
+        while (timer < zoomDuration)
+        {
+            mainCamera.orthographicSize = Mathf.Lerp(targetSize, orignalSize, timer / zoomDuration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        mainCamera.orthographicSize = orignalSize;
+    }
+
 }

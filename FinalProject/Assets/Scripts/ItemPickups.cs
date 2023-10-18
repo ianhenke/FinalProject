@@ -6,5 +6,8 @@ public class ItemPickups : MonoBehaviour
 {
     public static bool hasGun = false;
 
-
+    public static void ClearAllItems()
+    {
+        hasGun = false;
+    }
 }

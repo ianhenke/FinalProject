@@ -11,6 +11,7 @@ public class SpearThrower : MonoBehaviour
     {
         GameObject newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
 
+        targetPosition.z = 0;
         Vector3 direction = (targetPosition - transform.position).normalized;
 
         float angle = Mathf.Atan2(direction.y, direction.x);
