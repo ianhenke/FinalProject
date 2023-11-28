@@ -4911,12 +4911,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212114746059343179}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: 0.02, y: -3, z: -0.008480187}
-  m_LocalScale: {x: 2.6398442, y: 8.822194, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.590798, y: 8.393217, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4806519403054859354}
+  m_Father: {fileID: 4208410763008344843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4739348469454728334
 SpriteRenderer:
@@ -5000,6 +5000,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4806519403054859354}
+  - {fileID: 2843457470477817681}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7391244754239864179
@@ -5030,12 +5031,11 @@ Transform:
   m_GameObject: {fileID: 7391244754239864179}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -9.38, z: 0}
   m_LocalScale: {x: 0.22380035, y: 0.95137525, z: 0.8562377}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8284713490543181422}
-  - {fileID: 2843457470477817681}
   m_Father: {fileID: 4208410763008344843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!198 &2933993973670614969
@@ -5228,7 +5228,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.0048570633, g: 1, b: 0, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5292,7 +5292,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 5.78
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5875,7 +5875,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 7.57
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9782,7 +9782,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b1adb372cef5a6b46ba922bd9ae840aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

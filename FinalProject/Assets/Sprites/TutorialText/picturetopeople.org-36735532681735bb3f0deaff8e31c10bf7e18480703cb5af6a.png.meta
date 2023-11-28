@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 262
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388fdf6a29482494cb085659a9bc9c5a
+      internalID: -1448050509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2
+        width: 262
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c303d9a4d4451743b18e47cd5ec1491
+      internalID: 1238147370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_2
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 2
+        width: 262
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522e5ff5302baa44eae8c0581f070489
+      internalID: -609528651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_3
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 2
+        width: 262
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ca2e5a3abf05244bd036ba76e74527
+      internalID: 1259693142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_4
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 2
+        width: 262
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba8a381c97c9e649805366036dd4076
+      internalID: 394940289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +237,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_0: -1448050509
+      picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_1: 1238147370
+      picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_2: -609528651
+      picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_3: 1259693142
+      picturetopeople.org-36735532681735bb3f0deaff8e31c10bf7e18480703cb5af6a_4: 394940289
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
