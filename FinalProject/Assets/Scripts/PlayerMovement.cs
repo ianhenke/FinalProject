@@ -36,15 +36,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingPower = 16f;
     [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] AnimationStateChanger animationStateChanger;
 
     private void Awake()
     {
         wallJumpingPower = new Vector2(wallJumpPowerX, wallJumpPowerY);
     }
 
-private void Update()
+    private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (horizontal == 0 && IsGrounded()) // Check if not moving horizontally and grounded
+        {
+            animationStateChanger.ChangeAnimationState("Idle");
+        }
+        else if (!isWallJumping)
+        {
+            animationStateChanger.ChangeAnimationState("Running");
+        }
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
@@ -54,9 +65,10 @@ private void Update()
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            StartCoroutine(ChangeAnimationAfterDelay("Jumping", 0.3f)); // Delay the animation change
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -68,6 +80,14 @@ private void Update()
         {
             Flip();
         }
+    }
+
+    private IEnumerator ChangeAnimationAfterDelay(string animationName, float delay)
+    {
+        animationStateChanger.ChangeAnimationState(animationName);
+        animationStateChanger.canChangeAnimation = false;
+        yield return new WaitForSeconds(delay); // Wait for the specified duration
+        animationStateChanger.canChangeAnimation = true;
     }
 
     private void FixedUpdate()

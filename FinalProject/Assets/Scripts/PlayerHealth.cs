@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            this.GetComponent<SpriteRenderer>().enabled = false;
+            this.GetComponentInChildren<SpriteRenderer>().enabled = false;
             SceneManager.LoadScene("DeathScreen");
             
         }

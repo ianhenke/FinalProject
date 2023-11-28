@@ -8,6 +8,7 @@ public class SpearFrogAI : MonoBehaviour
     [SerializeField] float viewRadius = 10f;
     [SerializeField] SpearThrower thrower;
     [SerializeField] float throwDelay = .2f;
+    [SerializeField] AnimationStateChanger animationStateChanger;
 
     private bool canThrow = true;
 
@@ -17,6 +18,11 @@ public class SpearFrogAI : MonoBehaviour
         {
             canThrow = false;
             StartCoroutine(ThrowSpear());
+            StartCoroutine(ChangeAnimationAfterDelay("Throwing", throwDelay));
+        }
+        else
+        {
+            animationStateChanger.ChangeAnimationState("Idle");
         }
     }
     private void OnDrawGizmosSelected()
@@ -34,5 +40,13 @@ public class SpearFrogAI : MonoBehaviour
         thrower.Throw(playerTransform.position);
         yield return new WaitForSeconds(throwDelay);
         canThrow = true;
+    }
+
+    private IEnumerator ChangeAnimationAfterDelay(string animationName, float delay)
+    {
+        animationStateChanger.ChangeAnimationState(animationName);
+        animationStateChanger.canChangeAnimation = false;
+        yield return new WaitForSeconds(delay); // Wait for the specified duration
+        animationStateChanger.canChangeAnimation = true;
     }
 }

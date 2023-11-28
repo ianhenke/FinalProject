@@ -9,6 +9,7 @@ public class EnemyMeleeAI : MonoBehaviour
     [SerializeField] bool activated = false;
 
     EnemyMovement movement;
+    [SerializeField] AnimationStateChanger animationStateChanger;
 
     private void Awake()
     {
@@ -59,7 +60,15 @@ public class EnemyMeleeAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Tate"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(25);
+            StartCoroutine(ChangeAnimationAfterDelay("Attacking",.3f));
         }
+    }
+    private IEnumerator ChangeAnimationAfterDelay(string animationName, float delay)
+    {
+        animationStateChanger.ChangeAnimationState(animationName);
+        animationStateChanger.canChangeAnimation = false;
+        yield return new WaitForSeconds(delay); // Wait for the specified duration
+        animationStateChanger.canChangeAnimation = true;
     }
 
     private void OnDrawGizmosSelected()

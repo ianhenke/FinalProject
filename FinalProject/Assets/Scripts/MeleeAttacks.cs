@@ -8,16 +8,23 @@ public class MeleeAttacks : MonoBehaviour
     [SerializeField] float attackRange = 1;
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] int damageOutput = 34;
-    [SerializeField] SpriteRenderer attackIndicator;
+    [SerializeField] AnimationStateChanger animationStateChanger;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !PauseMenuManager.gameIsPaused)
         {
             Attack();
-            StartCoroutine(AttackIndicatorRoutine());
-            Debug.Log("INICATOR ON");
+            StartCoroutine(ChangeAnimationAfterDelay("Kicking", 0.3f)); // Delay the animation change
         }
+    }
+
+    private IEnumerator ChangeAnimationAfterDelay(string animationName, float delay)
+    {
+        animationStateChanger.ChangeAnimationState(animationName);
+        animationStateChanger.canChangeAnimation = false;
+        yield return new WaitForSeconds(delay); // Wait for the specified duration
+        animationStateChanger.canChangeAnimation = true;
     }
 
     private void Attack()
@@ -41,12 +48,4 @@ public class MeleeAttacks : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-    IEnumerator AttackIndicatorRoutine()
-    {
-        attackIndicator.enabled = true;
-        yield return new WaitForSeconds(.1f);
-        attackIndicator.enabled = false;
-    }
-
 }

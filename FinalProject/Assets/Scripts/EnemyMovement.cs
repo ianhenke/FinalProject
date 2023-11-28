@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector3 targetPosition;
+    [SerializeField] AnimationStateChanger animationStateChanger;
+
 
     private void Awake()
     {
@@ -28,5 +30,14 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 direction = (targetPosition - transform.position).normalized;
         rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+
+        if (rb.velocity.magnitude == 0)
+        {
+            animationStateChanger.ChangeAnimationState("Running");
+        }
+        else
+        {
+            animationStateChanger.ChangeAnimationState("Idle");
+        }
     }
 }
