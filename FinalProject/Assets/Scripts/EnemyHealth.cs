@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
+    [SerializeField] AudioSource takeDamageAudio;
     int currentHealth;
 
     private void Start()
@@ -15,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        takeDamageAudio.Play();
 
         if (currentHealth <= 0)
         {

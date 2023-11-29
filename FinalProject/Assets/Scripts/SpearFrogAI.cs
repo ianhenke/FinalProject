@@ -9,6 +9,7 @@ public class SpearFrogAI : MonoBehaviour
     [SerializeField] SpearThrower thrower;
     [SerializeField] float throwDelay = .2f;
     [SerializeField] AnimationStateChanger animationStateChanger;
+    [SerializeField] AudioSource throwAudio;
 
     private bool canThrow = true;
 
@@ -37,6 +38,7 @@ public class SpearFrogAI : MonoBehaviour
 
     IEnumerator ThrowSpear()
     {
+        throwAudio.Play();
         thrower.Throw(playerTransform.position);
         yield return new WaitForSeconds(throwDelay);
         canThrow = true;

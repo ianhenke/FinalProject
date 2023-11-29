@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour
 {
     Text healthText;
+    [SerializeField] Image healthBarFill;
 
     private void Awake()
     {
         healthText = GetComponent<Text>();
     }
 
-    public void SetHealthText(int newHealth)
+    public void SetHealth(int newHealth)
     {
-        healthText.text = "Health: " + newHealth.ToString();
+        healthBarFill.fillAmount = newHealth / 100f;
+        Debug.Log("NEW HEALTH: " + newHealth / 100f);
     }
 
 }

@@ -9,6 +9,7 @@ public class GunHandler : MonoBehaviour
     [SerializeField] float bulletSpeed = 5f;
     [SerializeField] GameObject tatesGun;
     [SerializeField] int maxAmmo = 16;
+    [SerializeField] AudioSource shootAudio;
 
     private bool hasGun = false;
 
@@ -48,6 +49,8 @@ public class GunHandler : MonoBehaviour
 
     private void Shoot(Vector3 targetPosition)
     {
+        shootAudio.Play();
+
         GameObject newProjectile = Instantiate(projectilePrefab, tatesGun.transform.position, Quaternion.identity);
 
         targetPosition.z = 0;

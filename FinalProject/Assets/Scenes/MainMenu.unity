@@ -305,6 +305,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1747616808}
+        m_TargetAssemblyTypeName: uiSfxHandler, Assembly-CSharp
+        m_MethodName: playButtonPressedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 195089998}
         m_TargetAssemblyTypeName: MainMenuHandler, Assembly-CSharp
         m_MethodName: SettingsButton
@@ -499,6 +511,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &330249624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997623767384426632, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163554401626396462, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+      propertyPath: m_Name
+      value: UI SFX Handler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
 --- !u!1 &456037400
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +947,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2816589460442937383, guid: fecbe228f9ebfe448a2e7157d22ba683, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f0c8d4d44c37a6944b23d3a1b53fcf1a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6142a4dbba78ef64b9f284b39ad2120d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1061,6 +1130,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1747616808}
+        m_TargetAssemblyTypeName: uiSfxHandler, Assembly-CSharp
+        m_MethodName: playButtonPressedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 21598420}
         m_TargetAssemblyTypeName: SlideFade, Assembly-CSharp
         m_MethodName: SlideIn
@@ -1418,6 +1499,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1747616808}
+        m_TargetAssemblyTypeName: uiSfxHandler, Assembly-CSharp
+        m_MethodName: playButtonPressedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 195089998}
         m_TargetAssemblyTypeName: MainMenuHandler, Assembly-CSharp
         m_MethodName: QuitGame
@@ -1913,6 +2006,17 @@ Transform:
   - {fileID: 668561087}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747616808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6019753290948203656, guid: 6b92ad8e50e10a044a6f2964261bc2dc, type: 3}
+  m_PrefabInstance: {fileID: 330249624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fce1416155f277449266ccbaa12f989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1806821475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +2099,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1747616808}
+        m_TargetAssemblyTypeName: uiSfxHandler, Assembly-CSharp
+        m_MethodName: playButtonPressedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 21598420}
         m_TargetAssemblyTypeName: SlideFade, Assembly-CSharp
         m_MethodName: SlideIn
@@ -2245,3 +2361,4 @@ SceneRoots:
   - {fileID: 952629532}
   - {fileID: 1980160524}
   - {fileID: 1518127225}
+  - {fileID: 330249624}

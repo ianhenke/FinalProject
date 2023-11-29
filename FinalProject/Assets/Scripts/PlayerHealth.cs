@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
     [SerializeField] HealthController healthController;
+    [SerializeField] AudioSource damageTakenSound;
     private int currentHealth;
 
     private void Start()
@@ -24,6 +25,7 @@ public class Health : MonoBehaviour
         if(currentHealth - damageAmount > 0)
         {
             currentHealth -= damageAmount;
+            damageTakenSound.Play();
         }
         else
         {
@@ -32,7 +34,7 @@ public class Health : MonoBehaviour
             
         }
 
-        healthController.SetHealthText(currentHealth);
+        healthController.SetHealth(currentHealth);
     }
 
     public void AddHealth(int addAmount)
@@ -45,6 +47,6 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        healthController.SetHealthText(currentHealth);
+        healthController.SetHealth(currentHealth);
     }
 }

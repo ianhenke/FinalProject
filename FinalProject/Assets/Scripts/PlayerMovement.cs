@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingCooldown = 1f;
     [SerializeField] private TrailRenderer tr;
     [SerializeField] AnimationStateChanger animationStateChanger;
+    [SerializeField] AudioSource jumpAudio;
+    [SerializeField] AudioSource dashAudio;
+
 
     private void Awake()
     {
@@ -66,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             StartCoroutine(ChangeAnimationAfterDelay("Jumping", 0.3f)); // Delay the animation change
+            jumpAudio.Play();
         }
 
             if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -145,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isWallJumping = true;
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            jumpAudio.Play();
             wallJumpingCounter = 0f;
 
             if (transform.localScale.x != wallJumpingDirection)
@@ -183,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
+        dashAudio.Play();
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;

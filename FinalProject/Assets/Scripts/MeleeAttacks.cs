@@ -9,12 +9,14 @@ public class MeleeAttacks : MonoBehaviour
     [SerializeField] LayerMask enemyLayer;
     [SerializeField] int damageOutput = 34;
     [SerializeField] AnimationStateChanger animationStateChanger;
+    [SerializeField] AudioSource kickAudio;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !PauseMenuManager.gameIsPaused)
         {
             Attack();
+            kickAudio.Play();
             StartCoroutine(ChangeAnimationAfterDelay("Kicking", 0.3f)); // Delay the animation change
         }
     }
