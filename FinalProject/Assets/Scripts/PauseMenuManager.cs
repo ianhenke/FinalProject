@@ -8,6 +8,13 @@ public class PauseMenuManager : MonoBehaviour
     public static bool gameIsPaused = false;
 
     [SerializeField] GameObject pauseMenuUI;
+    [SerializeField] GameObject settingsMenu;
+
+    private void Start()
+    {
+        pauseMenuUI.SetActive(false);
+        gameIsPaused = false;
+    }
 
     private void Update()
     {
@@ -42,5 +49,17 @@ public class PauseMenuManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void SettingsButton()
+    {
+        pauseMenuUI.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void BackButton()
+    {
+        settingsMenu.SetActive(false);
+        pauseMenuUI.SetActive(true);
     }
 }

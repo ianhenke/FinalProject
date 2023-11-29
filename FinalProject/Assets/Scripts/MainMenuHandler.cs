@@ -19,7 +19,6 @@ public class MainMenuHandler : MonoBehaviour
 
     public void SettingsButton()
     {
-        SettingsMenuHandler.lastScene = "MainMenu";
         SceneManager.LoadScene("Settings");
     }
 }
