@@ -12,8 +12,14 @@ public class HealthPickupController : MonoBehaviour
         if (collision.gameObject.CompareTag("Tate"))
         {
             collision.gameObject.GetComponent<Health>().AddHealth(healthAmount);
-            healthPickupSound.Play();
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            StartCoroutine(PlaySound());
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        healthPickupSound.Play();
+        yield return new WaitForSeconds(.1f);
+        gameObject.SetActive(false);
     }
 }

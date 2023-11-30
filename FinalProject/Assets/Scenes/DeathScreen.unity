@@ -208,7 +208,7 @@ MonoBehaviour:
       - m_Target: {fileID: 418778074}
         m_TargetAssemblyTypeName: DeathScreenHandler, Assembly-CSharp
         m_MethodName: RestartLevelButton
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -463,7 +463,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2816589460442937383, guid: fecbe228f9ebfe448a2e7157d22ba683, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f0c8d4d44c37a6944b23d3a1b53fcf1a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6142a4dbba78ef64b9f284b39ad2120d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

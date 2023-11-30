@@ -2120,7 +2120,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Opening Cutscene
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 456037401}
@@ -2132,7 +2132,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Opening Cutscene
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 83992487}
@@ -2144,7 +2144,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Opening Cutscene
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1320477698}
@@ -2156,7 +2156,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Opening Cutscene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1806821478

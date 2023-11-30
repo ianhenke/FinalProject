@@ -8,6 +8,7 @@ TagManager:
   - Bomb
   - IndianaJonesBoulder
   - Bullet
+  - Wall
   layers:
   - Default
   - TransparentFX

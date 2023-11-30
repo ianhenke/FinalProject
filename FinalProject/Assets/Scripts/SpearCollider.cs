@@ -9,7 +9,11 @@ public class SpearCollider : MonoBehaviour
         if (collision.gameObject.CompareTag("Tate"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(15);
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.SetActive(false);
+        }
+        else if(collision.gameObject.CompareTag("Wall"))
+        {
+            gameObject.SetActive(false);
         }
     }
 }

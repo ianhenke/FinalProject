@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenHandler : MonoBehaviour
 {
-    public void RestartLevelButton(string sceneName)
+    public void RestartLevelButton()
     {
+        int currentLevel = PlayerPrefs.GetInt("currentLevel");
+        string sceneName = "Level " + currentLevel;
         SceneManager.LoadScene(sceneName);
     }
 
