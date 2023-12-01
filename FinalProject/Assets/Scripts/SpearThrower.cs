@@ -7,9 +7,28 @@ public class SpearThrower : MonoBehaviour
     public GameObject projectilePrefab;
     [SerializeField] float speed = 5f;
 
+    List<GameObject> pool;
+
+    private void Awake()
+    {
+        pool = new List<GameObject>();
+    }
+
     public void Throw(Vector3 targetPosition)
     {
-        GameObject newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        GameObject newProjectile;
+
+        if(pool.Count > 50)
+        {
+            pool.RemoveAt(0);
+            newProjectile = pool[0];
+            newProjectile.transform.position = transform.position;
+        }
+        else
+        {
+            newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        }
+        pool.Add(newProjectile);
 
         targetPosition.z = 0;
         Vector3 direction = (targetPosition - transform.position).normalized;
