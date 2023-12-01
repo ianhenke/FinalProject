@@ -23,6 +23,11 @@ public class DialogueManager : MonoBehaviour
         MovingPlatform.tateEntersElevator += BeginDialogue;
     }
 
+    private void OnDisable()
+    {
+        MovingPlatform.tateEntersElevator -= BeginDialogue;
+    }
+
     private void BeginDialogue()
     {
         StartCoroutine(Dialogue());

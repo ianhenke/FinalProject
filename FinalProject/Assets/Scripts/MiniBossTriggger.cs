@@ -18,6 +18,11 @@ public class MiniBossTriggger : MonoBehaviour
         MiniBossController.bossHasDied += RemoveBarriers;
     }
 
+    private void OnDisable()
+    {
+        MiniBossController.bossHasDied -= RemoveBarriers;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Tate"))

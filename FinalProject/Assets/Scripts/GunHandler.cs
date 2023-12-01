@@ -19,6 +19,11 @@ public class GunHandler : MonoBehaviour
         SuperGun.activateSuperGun += ActivateSuperGun;
     }
 
+    private void OnDisable()
+    {
+        SuperGun.activateSuperGun -= ActivateSuperGun;
+    }
+
     private void Update()
     {
         if (ItemPickups.hasGun)

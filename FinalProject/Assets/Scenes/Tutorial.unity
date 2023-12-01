@@ -1758,7 +1758,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2552080837162137051, guid: 0189c2861ce06cc43940c8faeb4126f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0189c2861ce06cc43940c8faeb4126f3, type: 3}
 --- !u!114 &655925907 stripped
 MonoBehaviour:
@@ -4558,7 +4561,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 2000, y: 2000}
+  m_Size: {x: 3000, y: 3000}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

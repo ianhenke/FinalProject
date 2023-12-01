@@ -1,10 +1,6 @@
 using System.Collections;
 using UnityEngine;
 
-//code from:
-//https://gist.github.com/bendux/b6d7745ad66b3d48ef197a9d261dc8f6
-//https://gist.github.com/bendux/aa8f588b5123d75f07ca8e69388f40d9
-
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;

@@ -38,6 +38,11 @@ public class MiniBossController : MonoBehaviour
         animationStateChanger.ChangeAnimationState("Running");
     }
 
+    private void Start()
+    {
+        healthController.gameObject.SetActive(false);
+    }
+
     private void Update()
     {
         if(!healthController.gameObject.activeSelf)
