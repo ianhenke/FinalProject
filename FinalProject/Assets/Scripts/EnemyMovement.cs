@@ -33,11 +33,19 @@ public class EnemyMovement : MonoBehaviour
 
         if (rb.velocity.magnitude == 0)
         {
-            animationStateChanger.ChangeAnimationState("Running");
+            animationStateChanger.ChangeAnimationState("Idle");
         }
         else
         {
-            animationStateChanger.ChangeAnimationState("Idle");
+            animationStateChanger.ChangeAnimationState("Running");
+            if (direction.x < 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (direction.x > 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 }

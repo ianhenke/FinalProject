@@ -13,6 +13,12 @@ public class GunHandler : MonoBehaviour
 
     private bool hasGun = false;
 
+    private void Start()
+    {
+        ItemPickups.ClearAllItems();
+        SuperGun.activateSuperGun += ActivateSuperGun;
+    }
+
     private void Update()
     {
         if (ItemPickups.hasGun)
@@ -66,5 +72,15 @@ public class GunHandler : MonoBehaviour
 
         newProjectileRB.velocity = direction * bulletSpeed;
         newProjectileRB.rotation = degrees;
+    }
+
+    public void ActivateSuperGun()
+    {
+        this.bulletSpeed = bulletSpeed*10;
+        this.maxAmmo = maxAmmo*10;
+        if(tatesGun != null)
+        {
+            tatesGun.GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 }

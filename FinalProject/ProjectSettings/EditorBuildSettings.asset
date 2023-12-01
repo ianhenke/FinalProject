@@ -35,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 29d520021f2aa2846be854eabf1b083a
+  - enabled: 1
+    path: Assets/Scenes/PostLevel3Cutscene.unity
+    guid: 999888f50ebffda42ba3b4613c002f4e
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 08a4e4e86e819bf448ae981b8147b1ad
+  - enabled: 1
+    path: Assets/Scenes/PostGameCredits.unity
+    guid: ae861b59f101b4440897f977e72d64d2
   m_configObjects: {}
